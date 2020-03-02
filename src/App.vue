@@ -2,13 +2,16 @@
   <div id="app">
     <h1>v-minesweeper</h1>
     <p>This should soon be a Minesweeper game implemented in Vue</p>
+    <minesweeper-game />
   </div>
 </template>
 
 <script>
+import MinesweeperGame from './components/MinesweeperGame'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: { MinesweeperGame }
 }
 </script>
 

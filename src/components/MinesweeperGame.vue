@@ -11,9 +11,9 @@
             v-for="j in cols"
             :key="j"
           >
-            Row: {{ i }}
-            <br >
-            Col: {{ j }}
+            <minesweeper-cell
+              :value="i === j ? '|>' : `${i} - ${j}`"
+            />
           </td>
         </tr>
       </tbody>
@@ -22,8 +22,11 @@
 </template>
 
 <script>
+import MinesweeperCell from './MinesweeperCell'
+
 export default {
   name: 'MinesweeperGame',
+  components: { MinesweeperCell },
   props: {
     rows: {
       type: Number,

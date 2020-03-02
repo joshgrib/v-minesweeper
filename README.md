@@ -1,4 +1,4 @@
-# v-minesweeper
+# [v-minesweeper](https://v-minesweeper.web.app/)
 
 A minesweeper game in Vue, inspired by Manussakis/angular-minesweeper
 
@@ -20,6 +20,11 @@ yarn build
 ### Lints and fixes files
 ```
 yarn lint
+```
+
+### Deploy to Firebase
+```
+yarn deploy
 ```
 
 ### Customize configuration

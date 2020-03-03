@@ -1,10 +1,22 @@
 <template>
-  <div @click="reveal">
-    <span v-if="!hidden">
-      {{ value }}
-    </span>
-    <span v-else>
+  <div>
+    <span
+      v-if="!revealed"
+      key="hidden"
+    >
       ...
+    </span>
+    <span
+      v-else-if="isFlag"
+      key="flag"
+    >
+      |>
+    </span>
+    <span
+      v-else
+      key="neighbor-flag-count"
+    >
+      {{ neighborFlags }}
     </span>
   </div>
 </template>
@@ -13,19 +25,15 @@
 export default {
   name: 'MinesweeperCell',
   props: {
-    value: {
-      type: String,
-      default () { return ''; }
-    }
-  },
-  data () {
-    return {
-      hidden: true
-    }
-  },
-  methods: {
-    reveal () {
-      this.hidden = false;
+    revealed: {
+      type: Boolean
+    },
+    isFlag: {
+      type: Boolean
+    },
+    neighborFlags: {
+      type: Number,
+      default () { return 0; }
     }
   }
 }

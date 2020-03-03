@@ -1,6 +1,5 @@
 <template>
   <div>
-    <p>Game board</p>
     <table class="center bordered">
       <tbody>
         <tr

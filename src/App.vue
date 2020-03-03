@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <h1>v-minesweeper</h1>
-    <p>This should soon be a Minesweeper game implemented in Vue</p>
+    <p>
+      This should soon be a Minesweeper game implemented in Vue
+      <br>
+      <small>It's currently still a work in progress</small>
+    </p>
     <minesweeper-game />
   </div>
 </template>

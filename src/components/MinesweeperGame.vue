@@ -59,6 +59,7 @@ export default {
           newRow.push({
             revealed: false,
             isFlag: false,
+            //TODO: go back to using a neighbor array, that should make the reveal propogation easier
             neighborFlags: 0
           })
         }
